@@ -1,0 +1,33 @@
+.background {
+    background-color: rgb(28, 1, 80);
+    color: white;
+}
+
+.listStyle {
+    list-style-type: none;
+    width: 250px;
+    background-color: rgb(28, 1, 80);
+    margin-left: 41.5%;
+    margin-bottom: 0;
+}
+.listContent:hover .info {
+    color: white;
+    display: block;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.767);
+    width: 250px;
+    height: 250px;
+    margin-bottom: -200px;
+
+    .listImg:before {
+        background: rgba(0, 0, 0, 0.774);
+        width: 250px;
+        height: 250px;
+        z-index: 1;
+        position: absolute;
+    }
+}
+.info {
+    margin-top: -254px;
+    display: none;
+}
