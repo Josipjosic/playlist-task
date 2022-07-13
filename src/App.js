@@ -5,7 +5,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Top Pop</h1>
       <List />
     </div>
   );
