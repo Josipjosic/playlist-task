@@ -11,6 +11,7 @@ const List = () => {
   const [openModal, setOpenModal] = useState(false);
   const [selectedId, setSelectedId] = useState();
 
+  //Fetching data from API 
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(`${cors_api_host}${cors_api_url}`, {
@@ -29,8 +30,10 @@ const List = () => {
     fetchData();
   }, []);
 
+  //adding Loading paragraph until list loads
   if (!list.length) return <h3>Loading..</h3>;
 
+  //sorting logic 
   const onChangeEvent = (event) => {
     const sorting = event.target.value;
     const copyList = [...list];
@@ -43,19 +46,21 @@ const List = () => {
     setList(copyList);
   };
 
-  console.log(list);
-
+  //open modal function 
   const modalOpen = () => {
     setOpenModal(true);
   };
 
-  const selectedSong = list.find((id) => id === selectedId)
+  //setting up selected song to render in modal component
+  const selectedSong = list.find((id) => id === selectedId);
 
-  console.log(selectedSong)
+  console.log(list)
+  console.log(selectedId)
   
   return (
     <div>
       <Modal
+        selectedItem = {selectedSong}
         open={openModal}
         onClose={() => {
           setOpenModal(false);

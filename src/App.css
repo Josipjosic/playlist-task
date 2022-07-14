@@ -1,6 +1,8 @@
 .App {
   text-align: center;
-  background-color: rgb(28, 1, 80);
+  background-image: url("./components/Images/background.jpg");
+  background-repeat:round;
+  background-color: black;
   margin: 0;
   padding: 0;
 }
